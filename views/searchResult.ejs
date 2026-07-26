@@ -1,0 +1,23 @@
+<!-- views/foundUser.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <% if (locals.user) { %>
+    <ul>
+      <li>ID: <%= user.id%></li>
+      <li>First Name: <%= user.firstName%></li>
+      <li>Last Name: <%= user.lastName%></li>
+      <li>Email: <%= user.email %></li>
+      <li>Age: <%= user.age %></li>
+      <li>Bio: <%= user.bio%></li>
+    </ul>
+  <% } else { %>
+    <p>No user found.</p>
+  <% } %>
+  <a href="/">Back to home</a>
+</body>
+</html>
